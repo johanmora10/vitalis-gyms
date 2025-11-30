@@ -1,16 +1,24 @@
+// Estado del menú
 let menuVisible = false;
-//Función que oculta o muestra el menu
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList ="";
-        menuVisible = false;
-    }else{
-        document.getElementById("nav").classList ="responsive";
-        menuVisible = true;
-    }
+
+// Referencia al nav
+const nav = document.getElementById("nav");
+
+// Función que oculta o muestra el menú
+function mostrarOcultarMenu() {
+    menuVisible = !menuVisible; // Alterna el estado
+    nav.classList.toggle("responsive", menuVisible); // Añade o quita la clase 'responsive'
 }
-function seleccionar(){
-    //oculto el menu una vez que selecciono una opcion
-    document.getElementById("nav").classList = "";
+
+// Función que se llama al seleccionar una opción del menú
+function seleccionar() {
     menuVisible = false;
+    nav.classList.remove("responsive"); // Quita la clase 'responsive'
 }
+
+// Opcional: cerrar menú al hacer clic fuera (mejora UX)
+document.addEventListener("click", (event) => {
+    if (menuVisible && !nav.contains(event.target) && event.target.id !== "icono-nav") {
+        seleccionar();
+    }
+});

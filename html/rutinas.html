@@ -1,128 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutinas - Vitalis Corporis Gim</title>
     <link rel="stylesheet" href="/css/rutinas.css">
-    <title>RUTINAS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- ENCABEZADO -->
     <header class="contenedor">
-        <nav id="nav" class="encabezado " >
-            <h1 class="encabezado__titulo">VITALIS CORPORIS <span class="encabezado__contorno">GIM</span></h1>
-            <a class="encabezado__botones" href="index.html" onclick="seleccionar()" >INICIO</a>
-            <a class="encabezado__botones"  href="RUTINAS.HTML" onclick="seleccionar()" >RUTINAS</a>
-            <a class="encabezado__botones"  href="NUTRICION.HTML" onclick="seleccionar()" >NUTRICIÓN</a>
-            <a class="encabezado__botones"  href="COACH.HTML" onclick="seleccionar()" >COACH</a>
-            <a class="encabezado__botones"  href="TIENDA.HTML" onclick="seleccionar()" >TIENDA</a>
-            <a class="encabezado__botones"  href="BLOG.HTML" onclick="seleccionar()" >BLOG</a>
-            <a class="encabezado__botones boton--inicio" href="REGISTRARSE.HtML" onclick="seleccionar()" >registrarse</a>
-        <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+        <nav class="encabezado">
+            <h1 class="encabezado__titulo">
+                VITALIS CORPORIS <span class="encabezado__contorno">GIM</span>
+            </h1>
+            <div class="menu-botones">
+                <a class="encabezado__botones" href="index.html">INICIO</a>
+                <a class="encabezado__botones" href="RUTINAS.html">RUTINAS</a>
+                <a class="encabezado__botones" href="NUTRICION.html">NUTRICIÓN</a>
+                <a class="encabezado__botones" href="COACH.html">COACH</a>
+                <a class="encabezado__botones" href="TIENDA.html">TIENDA</a>
+                <a class="encabezado__botones" href="BLOG.html">BLOG</a>
+                <a class="encabezado__botones boton--inicio" href="REGISTRARSE.html">REGISTRARSE</a>
+            </div>
+        </nav>
     </header>
-    <main>
-        <section class="contenido">
-            <div class="entrenar">
-            <h2 class="entrenar__titulo"> entrenamiento </h2>
-            <h2 class="entrenar__titulo entrenar--t2">diferente</h2>
-            <p class="entrenar__parrafo">Con nuestras modalidades, nunca te aburrirás y siempre encontrarás algo que se adapte a tus necesidades y gustos. Desde entrenamiento tradicional, HIIT, clases de cycling, runining, boxeo, Rumba, Yoga, Triatlón bajo techo, musculación, clases enfocadas 100% en abdomen y glúteo; cada una de nuestras modalidades está diseñada para desafiar tu cuerpo y llevar tus resultados al siguiente nivel.</p>
+
+    <!-- SECCIÓN HERO -->
+    <section class="contenido">
+        <div class="entrenar">
+            <h2 class="entrenar__titulo">Entrenamiento</h2>
+            <h2 class="entrenar__titulo entrenar--t2">Diferente</h2>
+            <p class="entrenar__parrafo">
+                Con nuestras modalidades, nunca te aburrirás y siempre encontrarás algo que se adapte a tus necesidades y gustos.
+                Desde entrenamiento tradicional, HIIT, cycling, running, boxeo, yoga, musculación, y mucho más.
+            </p>
         </div>
-            <img class="imagen" src="/img/imaganes 2/entrenar.png" alt="gimnasio">
-            <img class="imagen--2" src="/img/imaganes 2/cardio.png" alt="cardio">
-        </section>
-        <section class="contenido2">
-            <div class="rutinas--rut">
-                <h2 class="rutina__titulo">rutinas</h2>
-            </div>
+    </section>
+
+    <!-- SECCIÓN DE RUTINAS -->
+    <section class="contenido2">
+        <h2 class="rutina__titulo">Rutinas Semanales</h2>
+        <div class="grid-rutinas">
+
             <div class="rutina">
-            <h2 class="rutina__titulo">LUNES (PECHO Y TRICEPS)</h2>
-            <p class="rutina__texto">
-    Press de banca: 3 series de 10 repeticiones.
-    Flexiones de brazos: 3 series de 15 repeticiones.
-    Press de banca inclinado: 3 series de 10 repeticiones.
-    Fondos en paralelas: 3 series de 12 repeticiones.
-    Extensiones de tríceps con mancuerna: 3 series de 
-    12 repeticiones.</p>
-            </div>
-            <div class="rutina rutina--2">
-                <h2 class="rutina__titulo">Martes (Espalda y Bíceps)</h2>
+                <h3 class="rutina__titulo">Lunes - Pecho y Tríceps</h3>
                 <p class="rutina__texto">
-    Dominadas: 3 series de 8 repeticiones.
-    Remo con barra: 3 series de 10 repeticiones.
-    Peso muerto: 3 series de 8 repeticiones.
-    Curl de bíceps con barra: 3 series de 12 repeticiones.
-    Remo con mancuerna: 3 series de 10 repeticiones.
+Press de banca: 3x10
+Flexiones: 3x15
+Press inclinado: 3x10
+Fondos en paralelas: 3x12
+Extensiones de tríceps: 3x12
                 </p>
             </div>
-            <div class="rutina rutina--3">
-                <h2 class="rutina__titulo">Miércoles (Descanso o Cardio)</h2>
+
+            <div class="rutina">
+                <h3 class="rutina__titulo">Martes - Espalda y Bíceps</h3>
                 <p class="rutina__texto">
-    Puedes optar por un día de descanso activo o realizar
-    una sesión de cardio como correr, nadar o montar
-    en bicicleta.</p>
+Dominadas: 3x8
+Remo con barra: 3x10
+Peso muerto: 3x8
+Curl bíceps barra: 3x12
+Remo mancuerna: 3x10
+                </p>
             </div>
-            <div class="rutina  rutina--4">
-                <h2 class="rutina__titulo" >Jueves (Piernas y Glúteos)</h2>
+
+            <div class="rutina">
+                <h3 class="rutina__titulo">Miércoles - Descanso/Cardio</h3>
                 <p class="rutina__texto">
-    Sentadillas: 4 series de 12 repeticiones.
-    Prensa de piernas: 3 series de 10 repeticiones.
-    Zancadas con mancuernas: 3 series de 10 
-    repeticiones por pierna.
-    Elevaciones de talones: 3 series de 15 repeticiones.
-    Puente de glúteos: 3 series de 12 repeticiones.</p>
+Opción de descanso activo o sesión de cardio: correr, nadar o bicicleta.
+                </p>
             </div>
-            <div class="rutina rutina--5">
-                <h2 class="rutina__titulo">Viernes (Hombros y Abdominales)</h2>
+
+            <div class="rutina">
+                <h3 class="rutina__titulo">Jueves - Piernas y Glúteos</h3>
                 <p class="rutina__texto">
-    Press militar: 3 series de 10 repeticiones.
-    Elevaciones laterales con mancuernas: 3 series de 
-    12 repeticiones.
-    Elevaciones frontales con mancuernas: 3 series de 
-    12 repeticiones.
-    Plancha: 3 series de 30 segundos.
-    Crunch abdominal: 3 series de 15 repeticiones.</p>
+Sentadillas: 4x12
+Prensa de piernas: 3x10
+Zancadas: 3x10 por pierna
+Elevaciones de talones: 3x15
+Puente de glúteos: 3x12
+                </p>
             </div>
-            <div class="rutina rutina--6">
-                <h2 class="rutina__titulo">Sábado (Cardio o Descanso)</h2>
+
+            <div class="rutina">
+                <h3 class="rutina__titulo">Viernes - Hombros y Abdominales</h3>
                 <p class="rutina__texto">
-    Puedes optar por otra sesión de cardio o un día 
-    completo de descanso para permitir que tu cuerpo 
-    se recupere.</p>
+Press militar: 3x10
+Elevaciones laterales: 3x12
+Elevaciones frontales: 3x12
+Plancha: 3x30s
+Crunch abdominal: 3x15
+                </p>
             </div>
-            <div class="rutina rutina--7">
-                <h2 class="rutina__titulo">Domingo (Estiramientos y Flexibilidad)</h2>
+
+            <div class="rutina">
+                <h3 class="rutina__titulo">Sábado - Cardio</h3>
                 <p class="rutina__texto">
-    Realiza ejercicios de estiramiento para cada grupo
-    muscular principal, manteniendo cada estiramiento
-    durante al menos 20-30 segundos. Esto ayudará a 
-    mejorar tu flexibilidad y reducir el riesgo 
-    de lesiones.</p>
+Sesión de cardio de 30-45 min: correr, nadar o bicicleta.
+                </p>
             </div>
-            <div class="rutina rutina--pre">
-                <h2 class="rutina__titulo">tener en cuenta</h2>
+
+            <div class="rutina">
+                <h3 class="rutina__titulo">Domingo - Estiramientos</h3>
                 <p class="rutina__texto">
-    Recuerda siempre calentar antes de comenzar tu rutina y estirar al 
-    finalizar para evitar lesiones y mejorar la recuperación muscular.
-     Además, ajusta la intensidad y el peso de los ejercicios según 
-     tu nivel de condición física y comodidad. Siempre es recomendable
-      consultar a un profesional de la salud antes de comenzar cualquier 
-      programa de ejercicios, especialmente si tienes alguna condición
-       médica preexistente.</p>
+Estiramientos de 20-30s por grupo muscular para prevenir lesiones y mejorar la flexibilidad.
+                </p>
             </div>
+
+        </div>
     </section>
-    </main>
+
+    <!-- PIE DE PÁGINA -->
     <footer class="pie">
-        <div class="final">
-            <h2 >VITALIS CORPORIS GIM © 2023</h2>
-            <h2 >Condiciones</h2>
-            <h2>Aviso legal</h2>
-            <h2>the matrix - bogota - colombia - © 2023</h2>
-        </div>
-        <div class="final--1">
-            <h2 class="final final--copi"">Copyright 2024 VITALIS CORPORIS GIM</h2>
-        </div>
+        <p>VITALIS CORPORIS GIM © 2024 - Todos los derechos reservados</p>
     </footer>
-    <script src="/java.js/menu.js"></script>
+
 </body>
 </html>

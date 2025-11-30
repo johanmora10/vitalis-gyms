@@ -1,205 +1,281 @@
+/* Reset y box-sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo con gradiente */
 body {
-    height: 1000px;
-    max-width: 100%;
-    background: linear-gradient(to bottom, #333, #000 );
-    font-family: sans-serif;
-    color:white ;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #333, #000);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
-
+/* Contenedor header */
 .contenedor {
-    position: sticky;
-    top: 0;
-    z-index: 30;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
+/* Barra de navegación */
 .encabezado {
-    font-family: sans-serif;
-    min-width: 100%;
-    height: 70px;
-    display: inline-flex;
-    background-color: #0009;
-    color:#f4f4f2 ;
-    position: absolute;
-    z-index: 30;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid #29ffc9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 20px;
+  border-bottom: 1px solid #29ffc9;
 }
 
 .encabezado__titulo {
-    font-size: 33px;
-    margin: 20px;
+  font-size: 28px;
+  color: #f4f4f2;
 }
 
 .encabezado__contorno {
-    color: #1ceb25;
+  color: #1ceb25;
+  font-weight: 700;
 }
 
 .encabezado__botones {
-    text-decoration: none;
-    box-sizing: border-box;
-    padding: 13px 0;
-    padding-left: 1px;
-    font-size: 20px;
-    margin: 10px;
-    color: #f4f4f2;
-    transition: color .20s, background-color .30s, outline .40s, box-shadow .40s;
+  color: #f4f4f2;
+  text-decoration: none;
+  padding: 8px 15px;
+  margin-left: 12px;
+  font-size: 18px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  user-select: none;
 }
 
 .encabezado__botones:hover {
-    background-color: #243a69;
-    border-radius: 20px;
-    color: #1ceb25;
-    outline: 2px solid #06d9b6;
-    box-shadow: 0 0 15px white;
+  background-color: #243a69;
+  color: #1ceb25;
+  outline: 2px solid #06d9b6;
+  box-shadow: 0 0 10px white;
 }
 
 .boton--inicio {
-    text-transform: uppercase;
-    background-color: #1ceb25;
-    border-radius: 20px;
-    color: #000;
+  background-color: #1ceb25;
+  color: #000;
 }
 
-.boton--inicio:hover{
-    background-color: #1ceb25;
-    border-radius: 20px;
-    color: #000;
-    outline: 2px solid #f4f4f2;
+.boton--inicio:hover {
+  outline: 2px solid #f4f4f2;
+  box-shadow: 0 0 15px #1ceb25;
 }
 
-.nav-responsive{
-    display: none;
-    font-size: 25px;
+.nav-responsive {
+  display: none;
+  font-size: 28px;
+  color: #f4f4f2;
+  cursor: pointer;
 }
 
-.titulo {
-    text-align: center;
-    margin: 0;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    padding: 0 10px;
-    font-size: 20px;
-    text-shadow: 0 0 5px yellow;
-    font-family: "bebas neue";
-    color: black;
-}
-
+/* Formulario principal */
 .formulario {
-    position: absolute;
-    z-index: 20;
-    top: 10%;
-    left: 40%;
-    background-color: transparent;
-    padding: 10px 20px;
-    max-width: 500px;
-    margin: auto;
-    margin-top: 50px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px white;
+  flex: 1;
+  max-width: 480px;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 60px auto 40px;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
 }
 
-
-input, textarea, select {
-    margin: 5px;
-    box-sizing: border-box;
+.contenedor1__titulo {
+  text-align: center;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  color: #1ceb25;
+  text-shadow: 0 0 10px #1ceb25;
 }
 
-.datos, textarea, select {
-    margin-bottom: 15px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 8px 12px ;
-    border: none;
-    border: 1px solid white ;
-    box-shadow: 0 0 4px yellow;
-    background-color: transparent;
-    border-radius: 10px ;
-    color: #eee;
-   
-}
-
-option {
-    background-color: #222;
-}
-
-textarea {
-    min-width: 100%;
-    resize: vertical;
-    min-height: 100px;
-    max-height: 200px;
-}
-
-label {
-    text-transform: uppercase;
-     line-height: 3px;
-    padding: 6px;
-}
-
-button{
-    margin-top: 7px;
-    border-radius: 10px;
-    font-weight: 900;
-    margin-left: 150px;
-    padding: 8px;
-    background-color: transparent;
-    width: 100px;
-    text-shadow: 0 0 5px white;
-    color: black;
-    box-shadow: 0 0 5px yellow;
-}
-
+/* Fieldsets */
 fieldset {
-    box-sizing: border-box;
-    padding: 10px 25px 10px 25px;
-    margin:  20px 0;
-    border: 1px solid white;
-    border-radius: 5px;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  padding: 20px 25px;
+  color: white;
 }
 
 legend {
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    font-weight: 900;
-    text-align: center;
-    border-radius: 5px;
-    text-transform: uppercase;
-    border: 1px solid white;
-    box-shadow: 0 0 5px white
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 15px;
+  font-size: 18px;
+  border: 1px solid white;
+  border-radius: 6px;
+  box-shadow: 0 0 5px white;
 }
 
+/* Inputs, select, textarea */
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #ddd;
+}
+
+.datos, textarea, select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: #eee;
+  font-size: 16px;
+  box-shadow: 0 0 5px yellow;
+  transition: border-color 0.3s ease;
+}
+
+.datos:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #1ceb25;
+  box-shadow: 0 0 10px #1ceb25;
+}
+
+option {
+  background-color: #222;
+}
+
+textarea {
+  min-height: 100px;
+  max-height: 200px;
+  resize: vertical;
+}
+
+/* Checkbox styling */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.checkbox-group label {
+  text-transform: none;
+  font-weight: 400;
+  color: #eee;
+  margin-bottom: 0;
+}
+
+/* Botón enviar */
+.btn-enviar {
+  margin-top: 15px;
+  width: 100%;
+  background-color: #1ceb25;
+  color: #000;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 12px 0;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #1ceb25;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #16b816;
+  box-shadow: 0 0 20px #16b816;
+}
+
+/* Mensajes de error */
+.error {
+  color: #ff4444;
+  font-size: 14px;
+  margin-top: 3px;
+  min-height: 18px;
+}
+
+/* Footer */
 .pie {
-    position: relative;
-    z-index: 20;
-    top: 1000px;
-    text-transform: lowercase;
-    max-width: 100%;
-    background-color: #000;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 25px 15px 40px;
+  font-size: 14px;
+  user-select: none;
 }
 
 .final {
-    display: inline-flex;
-    gap: 90px;
-    color: white;
-    margin-left: 370px;
-    margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 15px;
+}
+
+.final h2 {
+  font-weight: 400;
+  font-size: 14px;
+  user-select: none;
 }
 
 .final--1 {
-    border-top: 1px solid white;
-    height: 80px;
+  border-top: 1px solid white;
+  padding-top: 12px;
 }
 
 .final--copi {
-    text-transform: uppercase;
-    margin-top: 20px;
-    margin-left: 670px;
+  text-transform: uppercase;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .formulario {
+    margin: 30px 15px;
+    padding: 20px 15px;
+  }
+
+  .encabezado__botones {
+    font-size: 16px;
+    padding: 8px 10px;
+    margin-left: 6px;
+  }
+
+  .encabezado__titulo {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+
+  .btn-enviar {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .formulario {
+    margin: 20px 10px;
+    padding: 15px 10px;
+  }
+
+  .encabezado__botones {
+    font-size: 14px;
+    padding: 6px 8px;
+    margin-left: 4px;
+  }
+
+  .encabezado__titulo {
+    font-size: 20px;
+  }
 }

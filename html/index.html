@@ -1,73 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/estyle.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/estyle.css" />
+  <title>Vitalis Corporis Gim</title>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-        <header class="contenedor">
-            <nav id="nav" class="encabezado " >
-                <h1 class="encabezado__titulo">VITALIS CORPORIS <span class="encabezado__contorno">GIM</span></h1>
-                <a class="encabezado__botones" href="index.html" onclick="seleccionar()" >INICIO</a>
-                <a class="encabezado__botones"  href="RUTINAS.HTML" onclick="seleccionar()" >RUTINAS</a>
-                <a class="encabezado__botones"  href="NUTRICION.HTML" onclick="seleccionar()" >NUTRICIÓN</a>
-                <a class="encabezado__botones"  href="COACH.HTML" onclick="seleccionar()" >COACH</a>
-                <a class="encabezado__botones"  href="TIENDA.HTML" onclick="seleccionar()" >TIENDA</a>
-                <a class="encabezado__botones"  href="BLOG.HTML" onclick="seleccionar()" >BLOG</a>
-                <a class="encabezado__botones boton--inicio" href="REGISTRARSE.HtML" onclick="seleccionar()" >registrarse</a>
-            <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </header>
-    <main>
-    <section >
-        <div class="contenido__1">
+  <header class="contenedor">
+    <nav id="nav" class="encabezado">
+      <h1 class="encabezado__titulo">
+        VITALIS CORPORIS <span class="encabezado__contorno">GIM</span>
+      </h1>
+      <a class="encabezado__botones" href="index.html" onclick="seleccionar()">INICIO</a>
+      <a class="encabezado__botones" href="RUTINAS.html" onclick="seleccionar()">RUTINAS</a>
+      <a class="encabezado__botones" href="NUTRICION.html" onclick="seleccionar()">NUTRICIÓN</a>
+      <a class="encabezado__botones" href="COACH.html" onclick="seleccionar()">COACH</a>
+      <a class="encabezado__botones" href="TIENDA.html" onclick="seleccionar()">TIENDA</a>
+      <a class="encabezado__botones" href="BLOG.html" onclick="seleccionar()">BLOG</a>
+      <a class="encabezado__botones boton--inicio" href="REGISTRARSE.html" onclick="seleccionar()">Registrarse</a>
+      <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="contenido__1">
         <p class="contenido__motivacion">
-            El primer paso hacia cualquier objetivo es el más difícil
-            pero cada movimiento te acerca más a tu mejor versión 
-            Levántate y muévete, porque cada paso cuenta en el 
-            camino hacia tu bienestar y fortaleza
+          El primer paso hacia cualquier objetivo es el más difícil pero cada movimiento te acerca más a tu mejor versión.
+          Levántate y muévete, porque cada paso cuenta en el camino hacia tu bienestar y fortaleza.
         </p>
-        <video class="contenedor__videos" autoplay loop playsinline src="/videos/video_web_march.mp4" type="video/mp4"></video>  
-    </div>
-    <div class="seccion__2">
+        <video class="contenedor__videos" autoplay loop playsinline muted src="/videos/video_web_march.mp4" type="video/mp4"></video>
+      </div>
+
+      <div class="seccion__2">
         <h2 class="seccion__texto">
-            modalidades 
-            <span class="seccion__texto seccion--editor">innovadoras</span></h2>
+          Modalidades
+          <span class="seccion--editor">innovadoras</span>
+        </h2>
         <p class="seccion__parrafo">
-            Explorando nuestras variadas opciones de entrenamiento, con más de 
-            10 modalidades disponibles, nunca te faltarán oportunidades para mantener
-            tu rutina fresca y emocionante. Sea cual sea tu preferencia o objetivo, 
-            estamos aquí para asegurarnos de que encuentres la combinación perfecta 
-            que se ajuste a tus necesidades y gustos</p>
-        <img class="seccion--imagen" src="/img/fighter-1_1.webp" alt="tipos de entrenamientos" >
-    <!-- </div>  -->
-    <div class="biografia">
-        <h2 class="contacto">¿tienes dudas?</h2>
+          Explorando nuestras variadas opciones de entrenamiento, con más de 10 modalidades disponibles, nunca te faltarán oportunidades para mantener
+          tu rutina fresca y emocionante. Sea cual sea tu preferencia o objetivo, estamos aquí para asegurarnos de que encuentres la combinación perfecta que se ajuste a tus necesidades y gustos.
+        </p>
+        <img class="seccion--imagen" src="/img/fighter-1_1.webp" alt="tipos de entrenamientos" />
+      </div>
+
+      <div class="biografia">
+        <h2 class="contacto">¿Tienes dudas?</h2>
         <p class="contacto contacto--p">Compártenos tus datos y un asesor se contactará contigo</p>
         <a class="contacto contacto--t" href="tel:+57455529929">+57455529929</a>
         <a class="contacto contacto--g" href="mailto:SERVICIOALCLIENTE@vitalisgim.COM">SERVICIOALCLIENTE@vitalisgim.COM</a>
-        <h2 class="contacto conataco--motivador" >Transforma el sudor en <span class="conataco--motivar">éxito</span></h2>
-        <img class="espejo " src="/img/dandole.gif" alt="haciedo pectorales">
-        <img class="galeria" src="/img/perfilando.jpeg" alt="posando para fotos">
-        <img class="galeria galeria--1" src="/img/mancuerna.webp" alt="levantando pesas">
-        <img  class="galeria galeria--2" src="/img/motivador.jpg" alt="marcando los abdominales">
-    </div>
+        <h2 class="contacto conataco--motivador">
+          Transforma el sudor en <span class="conataco--motivar">éxito</span>
+        </h2>
+        <img class="espejo" src="/img/dandole.gif" alt="haciendo pectorales" />
+        <img class="galeria" src="/img/perfilando.jpeg" alt="posando para fotos" />
+        <img class="galeria galeria--1" src="/img/mancuerna.webp" alt="levantando pesas" />
+        <img class="galeria galeria--2" src="/img/motivador.jpg" alt="marcando los abdominales" />
+      </div>
     </section>
-</main>
-    <footer class="pie">
-        <div class="final">
-            <h2 >VITALIS CORPORIS GIM © 2023</h2>
-            <h2 >Condiciones</h2>
-            <h2>Aviso legal</h2>
-            <h2>the matrix - bogota - colombia - © 2023</h2>
-        </div>
-        <div class="final--1">
-            <h2 class="final final--copi"">Copyright 2024 VITALIS CORPORIS GIM</h2>
-        </div>
-    </footer>
-    <script src="/java.js/menu.js"></script>
+  </main>
+
+  <footer class="pie">
+    <div class="final">
+      <h2>VITALIS CORPORIS GIM © 2023</h2>
+      <h2>Condiciones</h2>
+      <h2>Aviso legal</h2>
+      <h2>the matrix - Bogotá - Colombia - © 2023</h2>
+    </div>
+    <div class="final--1">
+      <h2 class="final final--copi">Copyright 2024 VITALIS CORPORIS GIM</h2>
+    </div>
+  </footer>
+
+  <script src="/java.js/menu.js"></script>
 </body>
 </html>

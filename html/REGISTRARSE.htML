@@ -1,86 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/REGISTRARSE.css">
-    <title>REGISTRARSE</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registrarse - VITALIS CORPORIS GIM</title>
+  <link rel="stylesheet" href="../css/REGISTRARSE.css" />
+  <!-- FontAwesome para iconos si lo necesitas -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-    <header class="contenedor">
-        <nav id="nav" class="encabezado " >
-            <h1 class="encabezado__titulo">VITALIS CORPORIS <span class="encabezado__contorno">GIM</span></h1>
-            <a class="encabezado__botones" href="index.html" onclick="seleccionar()" >INICIO</a>
-            <a class="encabezado__botones"  href="RUTINAS.HTML" onclick="seleccionar()" >RUTINAS</a>
-            <a class="encabezado__botones"  href="NUTRICION.HTML" onclick="seleccionar()" >NUTRICIÓN</a>
-            <a class="encabezado__botones"  href="COACH.HTML" onclick="seleccionar()" >COACH</a>
-            <a class="encabezado__botones"  href="TIENDA.HTML" onclick="seleccionar()" >TIENDA</a>
-            <a class="encabezado__botones"  href="BLOG.HTML" onclick="seleccionar()" >BLOG</a>
-            <a class="encabezado__botones boton--inicio" href="REGISTRARSE.htML" onclick="seleccionar()" >registrarse</a>
-        <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
-            <i class="fa-solid fa-bars"></i>
+  <header class="contenedor">
+    <nav id="nav" class="encabezado">
+      <h1 class="encabezado__titulo">
+        VITALIS CORPORIS <span class="encabezado__contorno">GIM</span>
+      </h1>
+      <a class="encabezado__botones" href="index.html" onclick="seleccionar()">INICIO</a>
+      <a class="encabezado__botones" href="RUTINAS.html" onclick="seleccionar()">RUTINAS</a>
+      <a class="encabezado__botones" href="NUTRICION.html" onclick="seleccionar()">NUTRICIÓN</a>
+      <a class="encabezado__botones" href="COACH.html" onclick="seleccionar()">COACH</a>
+      <a class="encabezado__botones" href="TIENDA.html" onclick="seleccionar()">TIENDA</a>
+      <a class="encabezado__botones" href="BLOG.html" onclick="seleccionar()">BLOG</a>
+      <a class="encabezado__botones boton--inicio" href="REGISTRARSE.html" onclick="seleccionar()">REGISTRARSE</a>
+      <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="formulario">
+      <h1 class="contenedor1__titulo">Ingresar Datos</h1>
+      <form id="registroForm" novalidate>
+        <fieldset>
+          <legend>Datos de cuenta</legend>
+          <div class="input-group">
+            <label for="gmail">Correo Electrónico</label>
+            <input class="datos" type="email" id="gmail" name="gmail" placeholder="ejemplo@gmail.com" required />
+            <span class="error" id="error-gmail"></span>
+          </div>
+          <div class="input-group">
+            <label for="contraseña">Contraseña</label>
+            <input
+              class="datos"
+              type="password"
+              id="contraseña"
+              name="contraseña"
+              placeholder="Contraseña"
+              required
+              minlength="6"
+            />
+            <span class="error" id="error-contraseña"></span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tipos de usuario</legend>
+          <div class="input-group">
+            <label for="usuario">Plan de usuario</label>
+            <select id="usuario" name="usuario" required>
+              <option value="" disabled selected>Seleccione un plan</option>
+              <option value="empleado">Empleado</option>
+              <option value="usuario">Usuario</option>
+              <option value="premium">Premium</option>
+            </select>
+            <span class="error" id="error-usuario"></span>
+          </div>
+
+          <div class="input-group">
+            <label for="empresa">Empresa</label>
+            <input
+              class="datos"
+              list="empresa-list"
+              name="empresa"
+              id="empresa"
+              placeholder="Seleccione o escriba una empresa"
+              required
+            />
+            <datalist id="empresa-list">
+              <option value="Frontend"></option>
+              <option value="Datos"></option>
+              <option value="Backend"></option>
+            </datalist>
+            <span class="error" id="error-empresa"></span>
+          </div>
+        </fieldset>
+
+        <div class="input-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            placeholder="Ingrese un comentario..."
+            rows="4"
+            maxlength="300"
+          ></textarea>
         </div>
-    </header>
-    <main>
-        <section>
-                    <div class="formulario"> 
-                        <div class="contenedor1__titulo">
-                            <h1>ingresar datos</h1>
-                        </div>
-                        <fieldset>
-                            <legend>datos de cuenta</legend>
-                        <div >
-                            <label for="gmail">gmail</label>
-                            <input class="datos" type="email" placeholder="ejemplo@gmail.com" id="gmail" >
-                        </div>
-                        <div >
-                            <label for="contraseña">contraseña</label>
-                            <input class="datos" type="password" placeholder="contraseña" id="contraseña">
-                        </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend>tipos de usuario</legend>
-                        <div>
-                            <label for="usuario">plan de usuario</label>
-                            <select name="type_of_user" id="usuario">
-                                <option value="user1">empleado</option>
-                                <option value="user2">usuraio</option>
-                                <option value="user3">premion</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label >empresa</label>
-                            <input class="datos" list="empresa" name="empresa">
-                            <datalist id="empresa" name="type_of_user">
-                                <option value="johan">frontend</option>
-                                <option value="jhordani">datos</option>
-                                <option value="rivera">backend</option>
-                            </datalist>
-                        </div>
-                    </fieldset>
-                        <div>
-                            <label for="mensaje">mensaje</label>
-                            <textarea placeholder="ingrese un comentario..." id="mensaje"></textarea>
-                                <div>
-                                    <label for="terminos" >acepta los terminos y condiciones</label>
-                                    <input type="checkbox" id="terminos">
-                                </div>
-                                <a href="index.html"><button >enviar</button></a>
-                        </div>
-                     </div>
-        </section>
-    </main>
-    <footer class="pie">
-        <div class="final">
-            <h2 >VITALIS CORPORIS GIM © 2023</h2>
-            <h2 >Condiciones</h2>
-            <h2>Aviso legal</h2>
-            <h2>the matrix - bogota - colombia - © 2023</h2>
+
+        <div class="input-group checkbox-group">
+          <input type="checkbox" id="terminos" name="terminos" required />
+          <label for="terminos">Acepta los términos y condiciones</label>
+          <span class="error" id="error-terminos"></span>
         </div>
-        <div class="final--1">
-            <h2 class="final final--copi"">Copyright 2024 VITALIS CORPORIS GIM</h2>
-        </div>
-    </footer>
-    <script src="/java.js/menu.js"></script>
+
+        <button type="submit" class="btn-enviar">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="final">
+      <h2>VITALIS CORPORIS GIM © 2023</h2>
+      <h2>Condiciones</h2>
+      <h2>Aviso legal</h2>
+      <h2>The Matrix - Bogotá - Colombia - © 2023</h2>
+    </div>
+    <div class="final--1">
+      <h2 class="final final--copi">Copyright 2024 VITALIS CORPORIS GIM</h2>
+    </div>
+  </footer>
+
+  <script src="../java.js/menu.js"></script>
+  <script src="../java.js/registro.js"></script>
 </body>
 </html>

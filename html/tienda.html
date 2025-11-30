@@ -1,102 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Vitalis Corporis Gim</title>
     <link rel="stylesheet" href="/css/tienda.css">
-    <title>TIENDA</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- ENCABEZADO -->
     <header class="contenedor">
-        <nav id="nav" class="encabezado " >
+        <nav class="encabezado">
             <h1 class="encabezado__titulo">VITALIS CORPORIS <span class="encabezado__contorno">GIM</span></h1>
-            <a class="encabezado__botones" href="index.html" onclick="seleccionar()" >INICIO</a>
-            <a class="encabezado__botones"  href="RUTINAS.HTML" onclick="seleccionar()" >RUTINAS</a>
-            <a class="encabezado__botones"  href="NUTRICION.HTML" onclick="seleccionar()" >NUTRICIÓN</a>
-            <a class="encabezado__botones"  href="COACH.HTML" onclick="seleccionar()" >COACH</a>
-            <a class="encabezado__botones"  href="TIENDA.HTML" onclick="seleccionar()" >TIENDA</a>
-            <a class="encabezado__botones"  href="BLOG.HTML" onclick="seleccionar()" >BLOG</a>
-            <a class="encabezado__botones boton--inicio" href="REGISTRARSE.HtML" onclick="seleccionar()" >registrarse</a>
-        <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+            <a class="encabezado__botones" href="index.html">INICIO</a>
+            <a class="encabezado__botones" href="RUTINAS.HTML">RUTINAS</a>
+            <a class="encabezado__botones" href="NUTRICION.HTML">NUTRICIÓN</a>
+            <a class="encabezado__botones" href="COACH.HTML">COACH</a>
+            <a class="encabezado__botones" href="TIENDA.HTML">TIENDA</a>
+            <a class="encabezado__botones" href="BLOG.HTML">BLOG</a>
+            <a class="encabezado__botones boton--inicio" href="REGISTRARSE.HTML">REGISTRARSE</a>
+        </nav>
     </header>
-    <main>
-        <section>
-            <div class="imagen">
-            </div>
-            <div  class="contenedor1">
-                <h2 class="contenedor1__titulo">LOS MEJORES PRECIOS</h2>
-                <div class="contenedor1__fondo">
-                    <h2 class="contenedor1__titulo2">AÑO
-                        FULL</h2>
-                        <p class="contenedor1__texto">12 meses + 1 mes para un amigo</p>
-                        <h2 class="contenedor1__fondo2">$679<span class="editar">.000</span></h2>
-                    
-                </div>
-                <div class="contenedor1__fondo contenedor1--mover">
-                    <h2 class="contenedor1__titulo2">semestre</h2>
-                    <p class="contenedor1__texto">6 meses + 1 mes para un amigo</p>
-                    <h2 class="contenedor1__fondo2">$430<span class="editar">.000</span></h2>
-                </div >
-                <div class="contenedor1__fondo contenedor1--mover2">
-                    <h2 class="contenedor1__titulo2">trimestral</h2>
-                    <p class="contenedor1__texto">3 meses + 1 mes de un amigo</p>
-                    <h2 class="contenedor1__fondo2">$243<span class="editar">.000</span></h2>
-                </div>
-            </div>
-            <div class="contenedor2">
-                <h2  class="contenedor1__titulo  contenedor1--editar2">BENEFICIOS DE NUESTROS CONVENIOS</h2>
-                <div class="contenedor2__fondo">
-                    <img class="contenedor2__imagen" src="/img/imagenes 4/Icono-Tarifas-Preferencial.png" alt="">
-                    <h2 class="contenedor2__texto">Tarifa preferencial en planes anuales, semestrales y trimestrales.</h2>
-                </div>
-                <div class="contenedor2__fondo contenedor2--editar2">
-                    <img  class="contenedor2__imagen" src="/img/imagenes 4/Icono-Tarifa-Familia.png" alt="">
-                    <h2  class="contenedor2__texto">La misma tarifa para núcleo familiar en primer grado de consanguinidad.</h2>
-                </div> ">
-                <div class="contenedor2__fondo contenedor2--editar3">
-                    <img  class="contenedor2__imagen" src="/img/imagenes 4/Icono-Valoracion-Fisica.png" alt="">
-                    <h2  class="contenedor2__texto">Valoración física sin costo.</h2>
-                </div>
-                <div class="contenedor2__fondo contenedor2--editar4">
-                    <img  class="contenedor2__imagen" src="/img/imagenes 4/Icono-Plan-Entrenamiento.png" alt="">
-                    <h2  class="contenedor2__texto">Plan de entrenamiento.</h2>
-                </div>
-                <div class="contenedor2__fondo contenedor2--editar5">
-                    <img  class="contenedor2__imagen" src="/img/imagenes 4/Icono-Sin-Membresias.png" alt="">
-                    <h2  class="contenedor2__texto">Sin membresías ni cuotas de mantenimiento.</h2>
-                </div>
-                <div class="contenedor2__fondo contenedor2--editar6">
-                    <img  class="contenedor2__imagen" src="/img/imagenes 4/Icono-Acceso-Zonas.png" alt="">
-                    <h2  class="contenedor2__texto">Acceso a todas las zonas del gimnasio.</h2>
-                </div>
-                <div class="contenedor2__fondo contenedor2--editar7">
-                    <img  class="contenedor2__imagen" src="/img/imagenes 4/Icono-Acceso-Todas-Clases.png" alt="">
-                    <h2  class="contenedor2__texto">Acceso a todas las clases grupales.</h2>
-                </div>
-                <div class="contenedor2__fondo contenedor2--editar8">
-                    <img  class="contenedor2__imagen" src="/img/imagenes 4/Grupo.png" alt="">
-                    <h2  class="contenedor2__texto">Clases grupales</h2>
-                </div>
-                <div class="contenedor2__fondo contenedor2--editar9">
-                    <img  class="contenedor2__imagen" src="/img/imagenes 4/Pausas.png" alt="">
-                    <h2 class="contenedor2__texto">Pausas activas.</h2>
-                </div>
-            </div>
-        </section>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero__imagen"></div>
+        <div class="hero__texto">
+            <h2>LOS MEJORES PRECIOS</h2>
+            <p>Disfruta de planes especiales y beneficios únicos para entrenar con nosotros todo el año.</p>
+        </div>
+    </section>
+
+    <!-- PLANES -->
+    <main class="planes">
+        <div class="plan">
+            <h3>Plan Anual</h3>
+            <p>12 meses + 1 mes para un amigo</p>
+            <div class="precio">$679<span>.000</span></div>
+        </div>
+        <div class="plan">
+            <h3>Plan Semestral</h3>
+            <p>6 meses + 1 mes para un amigo</p>
+            <div class="precio">$430<span>.000</span></div>
+        </div>
+        <div class="plan">
+            <h3>Plan Trimestral</h3>
+            <p>3 meses + 1 mes para un amigo</p>
+            <div class="precio">$243<span>.000</span></div>
+        </div>
     </main>
+
+    <!-- BENEFICIOS -->
+    <section class="beneficios">
+        <h2>Beneficios de nuestros convenios</h2>
+        <div class="beneficios__grid">
+            <div class="beneficio">
+                <img src="/img/imagenes 4/Icono-Tarifas-Preferencial.png" alt="">
+                <p>Tarifa preferencial en todos los planes</p>
+            </div>
+            <div class="beneficio">
+                <img src="/img/imagenes 4/Icono-Tarifa-Familia.png" alt="">
+                <p>Mismo precio para núcleo familiar</p>
+            </div>
+            <div class="beneficio">
+                <img src="/img/imagenes 4/Icono-Valoracion-Fisica.png" alt="">
+                <p>Valoración física gratuita</p>
+            </div>
+            <div class="beneficio">
+                <img src="/img/imagenes 4/Icono-Plan-Entrenamiento.png" alt="">
+                <p>Plan de entrenamiento personalizado</p>
+            </div>
+            <div class="beneficio">
+                <img src="/img/imagenes 4/Icono-Sin-Membresias.png" alt="">
+                <p>Sin membresías ni cuotas de mantenimiento</p>
+            </div>
+            <div class="beneficio">
+                <img src="/img/imagenes 4/Icono-Acceso-Zonas.png" alt="">
+                <p>Acceso a todas las zonas del gimnasio</p>
+            </div>
+            <div class="beneficio">
+                <img src="/img/imagenes 4/Icono-Acceso-Todas-Clases.png" alt="">
+                <p>Acceso a todas las clases grupales</p>
+            </div>
+            <div class="beneficio">
+                <img src="/img/imagenes 4/Grupo.png" alt="">
+                <p>Clases grupales</p>
+            </div>
+            <div class="beneficio">
+                <img src="/img/imagenes 4/Pausas.png" alt="">
+                <p>Pausas activas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
     <footer class="pie">
         <div class="final">
-            <h2 >VITALIS CORPORIS GIM © 2023</h2>
-            <h2 >Condiciones</h2>
+            <h2>VITALIS CORPORIS GIM © 2024</h2>
+            <h2>Condiciones</h2>
             <h2>Aviso legal</h2>
-            <h2>the matrix - bogota - colombia - © 2023</h2>
-        </div>
-        <div class="final--1">
-            <h2 class="final final--copi"">Copyright 2024 VITALIS CORPORIS GIM</h2>
+            <h2>The Matrix - Bogotá - Colombia</h2>
         </div>
     </footer>
-    <script src="/java.js/menu.js"></script>
 </body>
 </html>

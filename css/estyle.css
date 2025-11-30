@@ -1,251 +1,352 @@
-
-body{
-    overflow-x:hidden;
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+body {
+  background: #121212;
+  color: #e0e0e0;
+  overflow-x: hidden;
+  line-height: 1.6;
 }
 
+/* Contenedor sticky para menú */
 .contenedor {
-    position: sticky;
-    top: 0;
-    z-index: 30;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #1f1f1f;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.8);
 }
 
+/* Navegación */
 .encabezado {
-    font-family: sans-serif;
-    min-width: 100%;
-    height: 70px;
-    display: inline-flex;
-    background-color: #0009;
-    color:#f4f4f2 ;
-    position: absolute;
-    z-index: 30;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid #29ffc9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 70px;
 }
 
 .encabezado__titulo {
-    font-size: 33px;
-    margin: 20px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00ff7f;
+  letter-spacing: 2px;
+  cursor: default;
 }
 
 .encabezado__contorno {
-    color: #1ceb25;
+  color: #00ff7f;
+  font-weight: 900;
 }
 
+/* Botones menú */
 .encabezado__botones {
-    text-decoration: none;
-    box-sizing: border-box;
-    padding: 13px 0;
-    padding-left: 1px;
-    font-size: 20px;
-    margin: 10px;
-    color: #f4f4f2;
-    transition: color .20s, background-color .30s, outline .40s, box-shadow .40s;
+  color: #cfcfcf;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-left: 15px;
+  user-select: none;
 }
 
 .encabezado__botones:hover {
-    background-color: #243a69;
-    border-radius: 20px;
-    color: #1ceb25;
-    outline: 2px solid #06d9b6;
-    box-shadow: 0 0 15px white;
+  background: #00ff7f;
+  color: #121212;
+  box-shadow: 0 0 10px #00ff7f;
+  transform: scale(1.05);
 }
 
 .boton--inicio {
-    text-transform: uppercase;
-    background-color: #1ceb25;
-    border-radius: 20px;
-    color: #000;
+  background: #00ff7f;
+  color: #121212;
+  font-weight: 700;
+  box-shadow: 0 0 12px #00ff7f;
 }
 
-.boton--inicio:hover{
-    background-color: #1ceb25;
-    border-radius: 20px;
-    color: #000;
-    outline: 2px solid #f4f4f2;
+.boton--inicio:hover {
+  background: #00cc66;
+  color: #fff;
+  box-shadow: 0 0 15px #00cc66;
+  transform: scale(1.1);
 }
 
-.nav-responsive{
-    display: none;
-    font-size: 25px;
+/* Menú hamburguesa (oculto por defecto) */
+.nav-responsive {
+  display: none;
+  font-size: 2.2rem;
+  color: #00ff7f;
+  cursor: pointer;
 }
 
+/* Contenido principal motivación */
 .contenido__motivacion {
-    font-family: sans-serif;
-    white-space: pre-wrap;
-    position: absolute;
-    top: 300px;
-    left: 175px;
-    font-size: 50px;
-    color: transparent; 
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
-    z-index: 20;
-    text-align: center;
+  max-width: 850px;
+  margin: 140px auto 40px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 8px #00ff7f;
+  line-height: 1.3;
 }
 
+/* Video */
 .contenedor__videos {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+  display: block;
+  max-width: 90vw;
+  max-height: 480px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 30px #00ff7f;
+  object-fit: cover;
 }
 
-
+/* Sección modalidades */
 .seccion__texto {
-    text-transform: uppercase;
-    white-space: pre-wrap;
-    position: absolute;
-    z-index: 20;
-    font-size: 74px;
-    bottom: -760px;
-    left: 100px;
-    color: white;
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #00ff7f;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 80px;
+  letter-spacing: 3px;
 }
 
 .seccion--editor {
-    top: 140px;
-    left: 230px;
-    color: transparent; 
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
+  font-size: 2.2rem;
+  color: #0f4c29;
+  margin-top: 8px;
+  text-shadow: 0 0 8px #00ff7f;
 }
+
 .seccion__parrafo {
-    font-family: sans-serif;
-    width: 630px;
-    text-wrap: balance;
-    position: absolute;
-    bottom: -900px;
-    left: 300px;
-    z-index: 20;
-    text-align: justify;
-    font-size: 23px;
-    color: white;
+  max-width: 700px;
+  margin: 20px auto 60px;
+  font-size: 1.15rem;
+  color: #c0c0c0;
+  text-align: justify;
+  line-height: 1.6;
+  padding: 0 10px;
 }
 
+/* Imagen de modalidad */
 .seccion--imagen {
-    margin-top: -4px;
-    z-index: 10;
-    max-width: 100%;
-    min-height: 100%;
-    transition:max-width 30s;
+  display: block;
+  max-width: 90vw;
+  max-height: 400px;
+  margin: 0 auto 70px;
+  border-radius: 18px;
+  box-shadow: 0 0 40px #00ff7f;
+  transition: transform 0.3s ease;
 }
 
+.seccion--imagen:hover {
+  transform: scale(1.05);
+}
+
+/* Biografía y contacto */
 .biografia {
-    background-color: #0a0d0e;
-    z-index: 10;
-    margin-top: -4px;
-    width: 100%;
-    height: 600px;
+  background: #222;
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  padding: 60px 20px;
+  border-radius: 25px;
+  box-shadow: 0 0 50px #00ff7f;
+  text-align: center;
+  color: #ddd;
+}
+
+/* Fotos biografía */
+.espejo,
+.galeria {
+  border-radius: 25px;
+  box-shadow: 0 0 25px #00ff7f;
+  margin: 15px;
+  max-width: 280px;
+  height: auto;
+  transition: box-shadow 0.3s ease;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .espejo {
-    position: relative;
-    z-index: 20;
-    top: 90px;
-    left: 80px;
-    max-width: 800px;
-    min-width: 500px;
-    border-radius: 98px;
-    box-shadow: 0 0 35px #44b0fd;
-    transition: box-shadow 3s;
+  border-radius: 50%;
+  max-width: 350px;
+  box-shadow: 0 0 40px #00cc66;
 }
-
-.galeria {
-    border-radius: 20px;
-    position: relative;
-    z-index: 20;
-    left: 190px;
-    max-width: 300px;
-    box-shadow: 0 0 35px yellow;
-}
-
 
 .galeria--1 {
-    height: 240px;
-    left: 230px;
-    box-shadow: 0 0 35px blue;
+  box-shadow: 0 0 40px #009944;
 }
 
 .galeria--2 {
-    height: 240px;
-    left: 270px;
-    box-shadow: 0 0 35px red;
+  box-shadow: 0 0 40px #004422;
 }
 
+.espejo:hover,
+.galeria:hover {
+  box-shadow: 0 0 60px #00ff7f;
+  transform: scale(1.05);
+}
+
+/* Contacto */
 .contacto {
-    position: absolute;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    z-index: 30;
-    top: 2330px;
-    left: 220px;
-    font-size: 40px;
-    color: yellow;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: #00ff7f;
 }
 
 .contacto--p {
-    top: 2380px;
-    text-transform: lowercase;
-    font-size: 17px;
-    left: 170px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: none;
+  margin-bottom: 15px;
+  color: #ccc;
 }
 
-.contacto--t {
-    top: 2400px;
-    text-decoration: none;
-    font-size: 19px;
-    left: 170px;
-}
-
+.contacto--t,
 .contacto--g {
-    top: 2420px;
-    font-size: 19px;
-    text-decoration: none;
-    display: block;
-    left: 170px;
+  color: #cfcfcf;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
 }
 
+.contacto--t:hover,
+.contacto--g:hover {
+  color: #00ff7f;
+}
+
+/* Motivador */
 .conataco--motivador {
-    position: relative;
-    z-index: 30;
-    top: 100px;
-    text-decoration: none;
-    font-size: 49px;
-    left: 880px;
-    color: white;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-top: 40px;
+  color: #eee;
 }
 
 .conataco--motivar {
-    color: #1ceb25;
+  color: #00ff7f;
 }
 
+/* Footer */
 .pie {
-    text-transform: lowercase;
-    max-width: 100%;
-    background-color: #000;
+  background: #111;
+  padding: 25px 0;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+  letter-spacing: 1.3px;
+  user-select: none;
 }
 
 .final {
-    display: inline-flex;
-    gap: 90px;
-    color: white;
-    margin-left: 370px;
-    margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.final h2 {
+  font-weight: 600;
+  color: #666;
 }
 
 .final--1 {
-    border-top: 1px solid white;
-    height: 80px;
+  margin-top: 20px;
+  border-top: 1px solid #222;
+  padding-top: 15px;
 }
 
 .final--copi {
-    text-transform: uppercase;
-    margin-top: 20px;
-    margin-left: 670px;
+  text-transform: uppercase;
+  color: #444;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .encabezado {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 15px;
+  }
+
+  .encabezado__titulo {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .encabezado__botones {
+    font-size: 1rem;
+    margin: 5px 8px;
+  }
+
+  .nav-responsive {
+    display: block;
+  }
+
+  .contenido__motivacion {
+    font-size: 1.5rem;
+    margin: 110px 20px 30px;
+  }
+
+  .seccion__texto {
+    font-size: 2rem;
+  }
+
+  .seccion--editor {
+    font-size: 1.6rem;
+  }
+
+  .seccion__parrafo {
+    max-width: 90%;
+    font-size: 1rem;
+  }
+
+  .seccion--imagen {
+    max-width: 95vw;
+    max-height: 300px;
+  }
+
+  .biografia {
+    padding: 30px 10px;
+    border-radius: 15px;
+  }
+
+  .espejo,
+  .galeria {
+    max-width: 90vw;
+    margin: 15px auto;
+    display: block;
+  }
+
+  .contacto {
+    font-size: 1.3rem;
+  }
+
+  .contacto--p,
+  .contacto--t,
+  .contacto--g {
+    font-size: 0.9rem;
+  }
+
+  .conataco--motivador {
+    font-size: 1.8rem;
+  }
+
+  .final {
+    gap: 25px;
+  }
 }

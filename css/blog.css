@@ -1,33 +1,32 @@
+/* RESET Y FUENTES */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
+/* HEADER */
 .contenedor {
     position: sticky;
     top: 0;
-    z-index: 30;
+    z-index: 100;
 }
 
 .encabezado {
-    font-family: sans-serif;
-    min-width: 100%;
-    height: 70px;
-    display: inline-flex;
-    background-color: #0009;
-    color:#f4f4f2 ;
-    position: absolute;
-    z-index: 30;
-    align-items: center;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.85);
+    height: 70px;
     border-bottom: 1px solid #29ffc9;
+    color: #f4f4f2;
+    position: relative;
 }
 
 .encabezado__titulo {
     font-size: 33px;
-    margin: 20px;
+    margin: 0 20px;
 }
 
 .encabezado__contorno {
@@ -36,113 +35,132 @@
 
 .encabezado__botones {
     text-decoration: none;
-    box-sizing: border-box;
-    padding: 13px 0;
-    padding-left: 1px;
-    font-size: 20px;
-    margin: 10px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 18px;
     color: #f4f4f2;
-    transition: color .20s, background-color .30s, outline .40s, box-shadow .40s;
+    border-radius: 15px;
+    transition: all 0.3s ease;
 }
 
 .encabezado__botones:hover {
     background-color: #243a69;
-    border-radius: 20px;
     color: #1ceb25;
-    outline: 2px solid #06d9b6;
-    box-shadow: 0 0 15px white;
+    box-shadow: 0 0 15px #1ceb25;
 }
 
 .boton--inicio {
-    text-transform: uppercase;
     background-color: #1ceb25;
-    border-radius: 20px;
     color: #000;
+    text-transform: uppercase;
 }
 
-.boton--inicio:hover{
-    background-color: #1ceb25;
-    border-radius: 20px;
-    color: #000;
+.boton--inicio:hover {
     outline: 2px solid #f4f4f2;
 }
 
-.nav-responsive{
-    display: none;
-    font-size: 25px;
-}
-
-.imagen-post {
-    background-image: url(https://image.slidesdocs.com/responsive-images/background/wall-natural-stone-city-texture-powerpoint-background_9a6baa7cec__960_540.jpg);
-    height: 1700px;
-    max-width: 100%;
-    background-attachment: fixed;
-    background-repeat: no-repeat; 
+/* HERO POST */
+.hero-post {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://image.slidesdocs.com/responsive-images/background/wall-natural-stone-city-texture-powerpoint-background_9a6baa7cec__960_540.jpg');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.contenedor1 {
-    box-shadow: 0 0 45PX #1ceb25;
+.hero-post__overlay {
     position: absolute;
-    z-index: 20;
-    top: 200px;
-    left: 500px;
-    height: 140%;
-    width: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.45);
+    top: 0;
+    left: 0;
+}
+
+.hero-post__texto {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #ffe900;
+    padding: 20px;
+}
+
+.hero-post__texto h1 {
+    font-size: 4rem;
+    text-shadow: 0 0 15px #1ceb25;
+    margin-bottom: 15px;
+}
+
+.hero-post__texto p {
+    font-size: 1.5rem;
+    text-shadow: 0 0 8px #000;
+}
+
+/* CONTENIDO DEL BLOG */
+.blog-content {
     background-color: #eee9;
+    padding: 50px 20px;
+    width: 80%;
+    margin: -100px auto 50px auto;
+    box-shadow: 0 0 40px #1ceb25;
+    border-radius: 15px;
 }
 
 .contenedor1__titulo {
-    padding:10px 0;
-    font-family: sans-serif;
     font-size: 35px;
     text-align: center;
     color: red;
+    margin-bottom: 20px;
 }
 
 .contenedor1__titulo2 {
-    font-weight: 600;
-    padding:10px 25px;
-    font-family: sans-serif;
-    font-size: 30px;
+    font-size: 28px;
     color: red;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
+
 .contenedor1__texto {
-    font-family: sans-serif;
-    padding: 8px;
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 .contenedor1__final1 {
-    text-shadow: 0 0 5px #1ceb25;
     font-size: 30px;
-    text-transform: uppercase;
     font-weight: 900;
     text-align: center;
     color: #243a69;
+    text-shadow: 0 0 5px #1ceb25;
+    margin-top: 40px;
 }
 
+/* FOOTER */
 .pie {
-    text-transform: lowercase;
-    max-width: 100%;
     background-color: #000;
+    padding: 20px 0;
 }
 
 .final {
-    display: inline-flex;
-    gap: 90px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
     color: white;
-    margin-left: 370px;
-    margin-top: 40px;
+    flex-wrap: wrap;
 }
 
 .final--1 {
     border-top: 1px solid white;
-    height: 80px;
+    padding-top: 10px;
+    text-align: center;
 }
 
 .final--copi {
     text-transform: uppercase;
-    margin-top: 20px;
-    margin-left: 670px;
+    color: white;
 }

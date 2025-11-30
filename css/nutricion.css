@@ -1,10 +1,12 @@
+/* RESET */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
+/* ENCABEZADO */
 .contenedor {
     position: sticky;
     top: 0;
@@ -12,157 +14,195 @@
 }
 
 .encabezado {
-    font-family: sans-serif;
     min-width: 100%;
     height: 70px;
-    display: inline-flex;
-    background-color: #0009;
-    color:#f4f4f2 ;
-    position: absolute;
-    z-index: 30;
-    align-items: center;
+    display: flex;
     justify-content: center;
-    border-bottom: 1px solid #29ffc9;
+    align-items: center;
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    border-bottom: 2px solid #00ffcc;
+    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
+    padding: 0 10px;
 }
 
 .encabezado__titulo {
-    font-size: 33px;
-    margin: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .encabezado__contorno {
-    color: #1ceb25;
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ffcc;
 }
 
 .encabezado__botones {
     text-decoration: none;
-    box-sizing: border-box;
-    padding: 13px 0;
-    padding-left: 1px;
-    font-size: 20px;
-    margin: 10px;
-    color: #f4f4f2;
-    transition: color .20s, background-color .30s, outline .40s, box-shadow .40s;
+    padding: 8px 15px;
+    font-size: 16px;
+    margin-left: 15px;
+    color: #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .encabezado__botones:hover {
-    background-color: #243a69;
-    border-radius: 20px;
-    color: #1ceb25;
-    outline: 2px solid #06d9b6;
-    box-shadow: 0 0 15px white;
+    background-color: #ffffff;
+    color: #000;
+    box-shadow: 0 0 15px #00ffcc;
 }
 
 .boton--inicio {
-    text-transform: uppercase;
-    background-color: #1ceb25;
-    border-radius: 20px;
+    background-color: #00ffcc;
     color: #000;
+    font-weight: bold;
 }
 
-.boton--inicio:hover{
-    background-color: #1ceb25;
-    border-radius: 20px;
-    color: #000;
-    outline: 2px solid #f4f4f2;
-}
-
-.nav-responsive{
-    display: none;
-    font-size: 25px;
-}
-
-.contenedor1 {
+/* HERO */
+.hero {
     position: relative;
-    z-index: 10;
-    height: 600px;
-    max-width:  100%;
-    background-attachment: fixed;
-    background-repeat: no-repeat; 
-    background-size: cover;
-    background-image: url(https://s1.elespanol.com/2023/10/03/vivir/799180512_236508436_1706x960.jpg);
-}
-
-.contenedor2 {
-    position: relative;
-    z-index: 10;
-    max-width: 50%;
-    left: 500px;
-    background-color:  #0a0d0e;
-}
-
-.contenedor2__titulo {
-    font-size: 30px;
-    text-align: center;
-    color: #1ceb25;
-    text-transform: uppercase;
-}
-
-.contenedor2__texto {
-    font-size: 19px;
-    padding:10px 0;
-    color: white;
-}
-
-.contenedor3 {
-    position: relative;
-    z-index: 10;
-    max-width: 50%;
-    left: 500px;
-    background-color: #0a0d0e ;
-}
-.contenedor3__titulo {
-    text-align: center;
-    color: #1ceb25;
-    text-transform: uppercase;
-}
-
-.contenedor3__titulo2 {
-    color: #1ceb25;
-    padding-left: 30px;
-    text-transform: uppercase;
-}
-
-.contenedor3__texto {
-    font-size: 19px;
-    padding:10px 0;
-    color: white;
-}
-
-.contenedor3__lista {
-    font-size: 19px;
-    padding-bottom: 10px;
-    text-align: justify;
-    padding-left: 20px;
-    color: white;
-}
- 
-.contenedor--mayor {
-    background-color:  #0a0d0e;
-}
-
-.pie {
-    text-transform: lowercase;
-    max-width: 100%;
     background-color: #000;
+    color: #ff0000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.hero__imagen {
+    flex: 1 1 400px;
+    min-height: 300px;
+    background-image: url('https://files-production.algoreducation.com/production-ts/__S3__6a574344-aa59-474f-b5df-8330efe10eea');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.hero__texto {
+    flex: 1 1 400px;
+    margin: 10px;
+}
+
+.hero__texto h2 {
+    color: #1ceb25;
+    text-shadow: 0 0 10px #1ceb25;
+    margin-bottom: 20px;
+}
+
+.hero__texto p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+/* SECCIÓN ALIMENTACIÓN */
+.alimentacion {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.alimentacion__titulo {
+    text-align: center;
+    font-size: 2rem;
+    color: #1ceb25;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #1ceb25;
+}
+
+.alimentacion__bloques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.alimentacion__bloque {
+    background: linear-gradient(145deg, #111, #1b1b1b);
+    border: 2px solid #1ceb25;
+    border-radius: 15px;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 0 20px #1ceb25;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.alimentacion__bloque:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px #1ceb25;
+}
+
+.alimentacion__bloque h3 {
+    font-size: 1.5rem;
+    color: #1ceb25;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.alimentacion__bloque p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.alimentacion__bloque ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.alimentacion__bloque li {
+    margin-bottom: 5px;
+}
+
+/* PIE DE PÁGINA */
+.pie {
+    background-color: #000;
+    color: #110342;
+    text-align: center;
+    padding: 20px 0;
 }
 
 .final {
-    display: inline-flex;
-    gap: 90px;
-    color: white;
-    margin-left: 370px;
-    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
 }
 
 .final--1 {
     border-top: 1px solid white;
-    height: 80px;
-}
-
-.final--copi {
-    text-transform: uppercase;
     margin-top: 20px;
-    margin-left: 670px;
+    padding-top: 10px;
 }
 
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .alimentacion__titulo {
+        font-size: 1.5rem;
+    }
+
+    .alimentacion__bloque h3 {
+        font-size: 1.3rem;
+    }
+
+    .alimentacion__bloque p,
+    .alimentacion__bloque li {
+        font-size: 0.9rem;
+    }
+
+    .encabezado__titulo {
+        font-size: 1.5rem;
+    }
+
+    .encabezado__botones {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}

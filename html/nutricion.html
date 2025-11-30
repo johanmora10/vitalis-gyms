@@ -1,98 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTRICIÓN - Vitalis Corporis Gim</title>
     <link rel="stylesheet" href="/css/nutricion.css">
-    <title>NUTRICION</title>    
+    <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <body>
-        <header class="contenedor">
-            <nav id="nav" class="encabezado " >
-                <h1 class="encabezado__titulo">VITALIS CORPORIS <span class="encabezado__contorno">GIM</span></h1>
-                <a class="encabezado__botones" href="index.html" onclick="seleccionar()" >INICIO</a>
-                <a class="encabezado__botones"  href="RUTINAS.HTML" onclick="seleccionar()" >RUTINAS</a>
-                <a class="encabezado__botones"  href="NUTRICION.HTML" onclick="seleccionar()" >NUTRICIÓN</a>
-                <a class="encabezado__botones"  href="COACH.HTML" onclick="seleccionar()" >COACH</a>
-                <a class="encabezado__botones"  href="TIENDA.HTML" onclick="seleccionar()" >TIENDA</a>
-                <a class="encabezado__botones"  href="BLOG.HTML" onclick="seleccionar()" >BLOG</a>
-                <a class="encabezado__botones boton--inicio" href="REGISTRARSE.HtML" onclick="seleccionar()" >registrarse</a>
-            <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
+
+    <!-- ENCABEZADO -->
+    <header class="contenedor">
+        <nav class="encabezado">
+            <h1 class="encabezado__titulo">VITALIS CORPORIS <span class="encabezado__contorno">GIM</span></h1>
+            <a class="encabezado__botones" href="index.html">INICIO</a>
+            <a class="encabezado__botones" href="RUTINAS.html">RUTINAS</a>
+            <a class="encabezado__botones" href="NUTRICION.html">NUTRICIÓN</a>
+            <a class="encabezado__botones" href="COACH.html">COACH</a>
+            <a class="encabezado__botones" href="TIENDA.html">TIENDA</a>
+            <a class="encabezado__botones" href="BLOG.html">BLOG</a>
+            <a class="encabezado__botones boton--inicio" href="REGISTRARSE.html">REGISTRARSE</a>
+            <div id="icono-nav" class="nav-responsive">
                 <i class="fa-solid fa-bars"></i>
             </div>
-        </header>
-        <main class="contenedor--mayor">
-            <section>
-                <div class="contenedor1">
-                </div>
-                <div class="contenedor2">
-                    <h2 class="contenedor2__titulo">Nutrición Deportiva: PRE, DURANTE Y POST entrenamiento</h2>
-                    <p class="contenedor2__texto" >
-                        Actualmente, muchas personas están entrenando en sus casas, ya sea trabajo de fuerza o resistencia. En ambas modalidades, se necesitan adecuada instrucción para el entrenamiento personalizado, como en alimentación, así poder lograr objetivos físicos y en rendimiento.
-                        </p>
-                        <p class="contenedor2__texto">
-                        Durante entrenamiento de fuerza, ocurre adaptación neuromuscular (para obtener más cantidad de fibras musculares) e hipertrofia del músculo (aumentar el tamaño). El glucógeno muscular es la fuente principal de energía para construir masa muscular, se sabe que con un entrenamiento de fuerza se puede disminuir la cantidad de glucógeno muscular hasta un 40%, lo cual nos indica que es importante el consumo de carbohidratos.
-                    </p>
-                </div>
-                <div class="contenedor3">
-                    <h2 class="contenedor3__titulo">Protocolo de alimentación para entrenos de FUERZA</h2>
-                    <p class="contenedor3__texto">Importante tomar en cuenta en qué horario se entrena para ver qué tipo de comida es la más recomendable: pre, durante y post.</p>
-                    <h2 class="contenedor3__titulo2">ANTES</h2>
-                    <p class="contenedor3__texto">Consumir carbohidratos para aumentar reservas de glucógeno, la cual es la fuente principal de energía. Por ejemplo:</p>
-                    <ul class="contenedor3__lista">
-                        <li>Pan tostado con guacamole</li>
-                        <li>Pan con peanut butter</li>
-                        <li>Avena con fruta</li>
-                        <li>Yogurt con fruta</li>
-                        <li>Fruta con mantequilla de maní</li>
-                        <li>Licuado de fruta con avena</li>
-                        <li>Pan con huevo</li>
-                        <li>Cereal con leche</li>
-                    </ul>
-                    <h2 class="contenedor3__titulo2">DURANTE</h2>
-                    <p class="contenedor3__texto">Se recomienda adecuada hidratación. Si es posible, realizar prueba de tasa de sudoración para determinar exactamente cuánto líquido pierda el deportista.
-                    </p>
-                        <p class="contenedor3__texto">
-                        Se debe de hidratar con electrolitos ya que no solamente se pierde agua, sino que también electrolitos: sodio. Por ejemplo: consumir bebida hidratante.
-                    </p>
-                    <p class="contenedor3__texto">
-                        *Aún no hay suficiente investigación que nos demuestre los beneficios de alimentos o proteína durante entrenamiento.</p>
-                        <h2 class="contenedor3__titulo2">POST</h2>
-                        <p class="contenedor3__texto">En entrenamiento de fuerza es importante consumir proteína para la construcción muscular, para poder reponer y recuperar la degradación de fibras musculares.
-                            </p>
-                            <p class="contenedor3__texto">
-                            Se recomienda consumir la proteína en el período de 30 minutos post ejercicio. Puede ser en forma de alimento o bebida.
-                            </p>
-                            <p class="contenedor3__texto">
-                            Se debe de consumir aproximadamente 20gramos de proteínas de alta calidad post ejercicio. Por ejemplo:</p>
-                            <ul class="contenedor3__lista">
-                                <li>Whey proteín debido a su alto contenido de leucina.</li>
-                                <li>Carbohidratos con proteína para reponer glucógeno: pan con huevo, licuado de proteína con fruta, pan con mantequilla de maní</li>
-                                <li>Tomar bebida hidratante con sodio</li>
-                                <li>Panqueques de proteína con fruta</li>
-                                <li>Pollo o carne con vegetales</li>
-                                <li>Barrita de proteína</li>
-                                <li>Licuado verde con proteína</li>
-                                <li>Huevo con jamón y queso</li>
-                                <li>Frutos secos con fruta</li>
-                                <li>Hummus con aguacate</li>
-                            </ul>
-                            <p class="contenedor3__texto">Durante entrenamiento de resistencia (triatletas, maratonistas, ciclismo etc.), es muy importante la alimentación e hidratación para mejorar rendimiento. La alimentación debe de ser entre 1-3 horas antes, baja en proteína, grasas y fibra, para evitar malestar gastrointestinal. Por lo que se recomienda probar la hora y la comida exacta en los entrenamientos. En cuanto a hidratación, se recomienda aproximadamente: 6ml/kg de peso de líquidos con sodio, 3 horas antes, y 4 ml/kg, 2 horas antes si el deportista no orinó o si su orina es color oscuro.</p>
-                </div>
-            </section>
-        </main>
-        <footer class="pie">
-            <div class="final">
-                <h2 >VITALIS CORPORIS GIM © 2023</h2>
-                <h2 >Condiciones</h2>
-                <h2>Aviso legal</h2>
-                <h2>the matrix - bogota - colombia - © 2023</h2>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN HERO -->
+    <section class="hero">
+        <div class="hero__imagen"></div>
+        <div class="hero__texto">
+            <h2>Nutrición Deportiva: PRE, DURANTE Y POST entrenamiento</h2>
+            <p>
+                Actualmente, muchas personas están entrenando en sus casas, ya sea trabajo de fuerza o resistencia. En ambas modalidades, se necesita adecuada instrucción para entrenamiento personalizado y alimentación, para lograr objetivos físicos y de rendimiento.
+            </p>
+            <p>
+                Durante entrenamiento de fuerza, ocurre adaptación neuromuscular e hipertrofia del músculo. El glucógeno muscular es la fuente principal de energía, pudiendo disminuir hasta un 40% durante entrenamiento, por lo que es importante el consumo de carbohidratos.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ALIMENTACIÓN -->
+    <section class="alimentacion">
+        <h2 class="alimentacion__titulo">Protocolo de alimentación - <span>FUERZA</span></h2>
+
+        <div class="alimentacion__bloques">
+            <div class="alimentacion__bloque">
+                <h3>ANTES</h3>
+                <p>Consumir carbohidratos para aumentar reservas de glucógeno:</p>
+                <ul>
+                    <li>Pan tostado con guacamole</li>
+                    <li>Pan con mantequilla de maní</li>
+                    <li>Avena con fruta</li>
+                    <li>Yogurt con fruta</li>
+                    <li>Licuado de fruta con avena</li>
+                    <li>Pan con huevo</li>
+                    <li>Cereal con leche</li>
+                </ul>
             </div>
-            <div class="final--1">
-                <h2 class="final final--copi"">Copyright 2024 VITALIS CORPORIS GIM</h2>
+
+            <div class="alimentacion__bloque">
+                <h3>DURANTE</h3>
+                <p>Hidratación y electrolitos según la intensidad del entrenamiento. Es importante realizar pruebas de sudoración para calcular la cantidad exacta de líquidos y electrolitos necesarios.</p>
             </div>
-        </footer>
-      <script src="/java.js/menu.js"></script>
-    </body>
+
+            <div class="alimentacion__bloque">
+                <h3>POST</h3>
+                <p>Consumir proteína de alta calidad en los 30 minutos post entrenamiento. Ejemplos:</p>
+                <ul>
+                    <li>Whey protein</li>
+                    <li>Pan con huevo</li>
+                    <li>Licuado de proteína con fruta</li>
+                    <li>Pollo o carne con vegetales</li>
+                    <li>Barrita de proteína</li>
+                    <li>Licuado verde con proteína</li>
+                    <li>Huevo con jamón y queso</li>
+                    <li>Frutos secos con fruta</li>
+                    <li>Hummus con aguacate</li>
+                </ul>
+            </div>
+
+            <div class="alimentacion__bloque">
+                <h3>ENTRENAMIENTO DE RESISTENCIA</h3>
+                <p>Triatletas, maratonistas y ciclistas deben ajustar la alimentación y la hidratación para mejorar rendimiento. Evitar alimentos altos en fibra, grasa y proteína 1-3 horas antes del entrenamiento. Hidratarse adecuadamente según peso corporal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie">
+        <div class="final">
+            <h2>VITALIS CORPORIS GIM © 2024</h2>
+            <h2>Condiciones</h2>
+            <h2>Aviso legal</h2>
+            <h2>The Matrix - Bogotá - Colombia</h2>
+        </div>
+        <div class="final--1">
+            <h2 class="final--copi">Copyright 2024 VITALIS CORPORIS GIM</h2>
+        </div>
+    </footer>
+
+</body>
 </html>

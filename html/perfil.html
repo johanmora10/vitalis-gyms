@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perfil - VITALIS CORPORIS GIM</title>
+  <link rel="stylesheet" href="../css/REGISTRARSE.css" />
+  <style>
+    /* Estilos para pestañas */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 20px;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #1ceb25;
+      color: #000;
+      font-weight: 700;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #1ceb25;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .tab:hover {
+      background-color: #16b816;
+    }
+
+    .tab.active {
+      background-color: #0f9d11;
+      box-shadow: 0 0 15px #0f9d11;
+    }
+
+    .tab-content {
+      max-width: 600px;
+      margin: 20px auto 40px;
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 25px;
+      border-radius: 12px;
+      color: white;
+      font-size: 18px;
+      min-height: 200px;
+      box-shadow: 0 0 25px rgba(28, 235, 37, 0.5);
+    }
+
+    button#cerrarSesion {
+      display: block;
+      margin: 30px auto 0;
+      padding: 12px 25px;
+      border-radius: 12px;
+      background-color: #1ceb25;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 0 15px #1ceb25;
+      color: #000;
+      transition: background-color 0.3s ease;
+    }
+
+    button#cerrarSesion:hover {
+      background-color: #16b816;
+      box-shadow: 0 0 20px #16b816;
+    }
+  </style>
+</head>
+<body>
+  <header class="contenedor">
+    <nav id="nav" class="encabezado">
+      <h1 class="encabezado__titulo">
+        VITALIS CORPORIS <span class="encabezado__contorno">GIM</span>
+      </h1>
+      <a class="encabezado__botones" href="index.html">INICIO</a>
+      <a class="encabezado__botones" href="RUTINAS.html">RUTINAS</a>
+      <a class="encabezado__botones" href="NUTRICION.html">NUTRICIÓN</a>
+      <a class="encabezado__botones" href="COACH.html">COACH</a>
+      <a class="encabezado__botones" href="TIENDA.html">TIENDA</a>
+      <a class="encabezado__botones" href="BLOG.html">BLOG</a>
+      <a class="encabezado__botones boton--inicio" href="REGISTRARSE.html">REGISTRARSE</a>
+    </nav>
+  </header>
+
+  <main class="formulario" style="text-align:center;">
+
+    <h1>Perfil de usuario</h1>
+
+    <div class="tabs">
+      <div class="tab active" data-tab="info">Información</div>
+      <div class="tab" data-tab="ajustes">Ajustes</div>
+      <div class="tab" data-tab="historial">Historial</div>
+    </div>
+
+    <div id="info" class="tab-content">
+      <!-- Información del usuario -->
+    </div>
+    <div id="ajustes" class="tab-content" style="display:none;">
+      <!-- Ajustes para el usuario -->
+      <p>Aquí puedes cambiar tus preferencias, actualizar datos o modificar configuraciones.</p>
+      <form id="form-ajustes" style="max-width: 400px; margin: 0 auto; text-align: left;">
+        <label for="cambiarEmail">Correo electrónico:</label><br />
+        <input type="email" id="cambiarEmail" name="cambiarEmail" style="width: 100%; padding: 8px; margin-bottom: 15px;" /><br />
+        <label for="cambiarEmpresa">Empresa:</label><br />
+        <input type="text" id="cambiarEmpresa" name="cambiarEmpresa" style="width: 100%; padding: 8px; margin-bottom: 15px;" /><br />
+        <button type="submit" style="
+          background-color: #1ceb25;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 12px;
+          font-weight: 700;
+          cursor: pointer;
+          color: #000;
+          box-shadow: 0 0 15px #1ceb25;
+        ">Guardar cambios</button>
+      </form>
+      <p id="mensaje-ajustes" style="color: #1ceb25; font-weight: 700; margin-top: 15px;"></p>
+    </div>
+
+    <div id="historial" class="tab-content" style="display:none;">
+      <!-- Ejemplo de historial -->
+      <p>No tienes historial de actividad aún.</p>
+    </div>
+
+    <button id="cerrarSesion">Cerrar sesión</button>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.tab');
+      const contents = document.querySelectorAll('.tab-content');
+      const perfilDiv = document.getElementById('info');
+      const cerrarSesionBtn = document.getElementById('cerrarSesion');
+      const formAjustes = document.getElementById('form-ajustes');
+      const mensajeAjustes = document.getElementById('mensaje-ajustes');
+
+      let usuarioData = JSON.parse(localStorage.getItem('usuarioRegistrado'));
+
+      if (!usuarioData) {
+        perfilDiv.innerHTML = '<p style="color: red;">No has iniciado sesión. Por favor, regístrate primero.</p>';
+        // Opcional: redirigir al registro
+        setTimeout(() => {
+          window.location.href = 'REGISTRARSE.html';
+        }, 3000);
+        return;
+      }
+
+      // Mostrar info inicial en pestaña info
+      perfilDiv.innerHTML = `
+        <p>Bienvenido, <strong>${usuarioData.correo}</strong></p>
+        <p>Tipo de usuario: <strong>${usuarioData.tipo}</strong></p>
+        <p>Empresa: <strong>${usuarioData.empresa}</strong></p>
+        <p>Estás dentro de tu perfil.</p>
+      `;
+
+      // Poner valores actuales en formulario ajustes
+      document.getElementById('cambiarEmail').value = usuarioData.correo;
+      document.getElementById('cambiarEmpresa').value = usuarioData.empresa;
+
+      // Manejar cambio de pestañas
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+
+          const tabName = tab.getAttribute('data-tab');
+          contents.forEach(c => {
+            c.style.display = c.id === tabName ? 'block' : 'none';
+          });
+        });
+      });
+
+      // Guardar cambios en ajustes
+      formAjustes.addEventListener('submit', e => {
+        e.preventDefault();
+
+        const nuevoEmail = document.getElementById('cambiarEmail').value.trim();
+        const nuevaEmpresa = document.getElementById('cambiarEmpresa').value.trim();
+
+        if (!nuevoEmail || !validateEmail(nuevoEmail)) {
+          mensajeAjustes.style.color = 'red';
+          mensajeAjustes.textContent = 'Por favor ingresa un correo válido.';
+          return;
+        }
+
+        if (!nuevaEmpresa) {
+          mensajeAjustes.style.color = 'red';
+          mensajeAjustes.textContent = 'Por favor ingresa una empresa.';
+          return;
+        }
+
+        // Actualizar localStorage
+        usuarioData.correo = nuevoEmail;
+        usuarioData.empresa = nuevaEmpresa;
+        localStorage.setItem('usuarioRegistrado', JSON.stringify(usuarioData));
+
+        // Actualizar info en pestaña info
+        if (document.querySelector('.tab.active').getAttribute('data-tab') === 'info') {
+          perfilDiv.innerHTML = `
+            <p>Bienvenido, <strong>${usuarioData.correo}</strong></p>
+            <p>Tipo de usuario: <strong>${usuarioData.tipo}</strong></p>
+            <p>Empresa: <strong>${usuarioData.empresa}</strong></p>
+            <p>Estás dentro de tu perfil.</p>
+          `;
+        }
+
+        mensajeAjustes.style.color = '#1ceb25';
+        mensajeAjustes.textContent = 'Cambios guardados correctamente.';
+      });
+
+      // Función simple para validar email
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email.toLowerCase());
+      }
+
+      // Cerrar sesión
+      cerrarSesionBtn.addEventListener('click', () => {
+        localStorage.removeItem('usuarioRegistrado');
+        window.location.href = 'REGISTRARSE.html';
+      });
+    });
+  </script>
+</body>
+</html>
